@@ -36,29 +36,31 @@ Abra o menu `…` do painel do agente → **MCP Servers** → **Manage MCP Serve
 
 ## 3. No Antigravity — instalar a skill
 
-Esta skill fica na pasta `elementor-wsp-mcp/` do repositório [ExpertSA-Skills](https://github.com/dbadaniel/ExpertSA-Skills). Clone o repositório e copie a pasta para a pasta de skills do Antigravity.
-
-**Mac / Linux (global, todos os projetos):**
+**Com um comando (precisa do Node.js 16.7+):**
 ```bash
-git clone https://github.com/dbadaniel/ExpertSA-Skills.git ~/ExpertSA-Skills
-mkdir -p ~/.gemini/antigravity/skills
-cp -r ~/ExpertSA-Skills/elementor-wsp-mcp ~/.gemini/antigravity/skills/
+npx github:dbadaniel/ExpertSA-Skills elementor-wsp-mcp
 ```
+Instala em `~/.gemini/config/skills/`, a pasta global do Antigravity (vale para todos os projetos). Funciona igual no Mac, Linux e Windows. **Rodar de novo atualiza** para a versão mais recente.
 
-**Windows (PowerShell):**
-```powershell
-git clone https://github.com/dbadaniel/ExpertSA-Skills.git "$env:USERPROFILE\ExpertSA-Skills"
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.gemini\antigravity\skills"
-Copy-Item -Recurse "$env:USERPROFILE\ExpertSA-Skills\elementor-wsp-mcp" "$env:USERPROFILE\.gemini\antigravity\skills\"
+Outras opções:
+| Comando | Onde instala |
+|---|---|
+| `npx github:dbadaniel/ExpertSA-Skills elementor-wsp-mcp --project` | `./.agents/skills/` (só o projeto aberto) |
+| `npx github:dbadaniel/ExpertSA-Skills elementor-wsp-mcp --cli` | Antigravity CLI (`~/.gemini/antigravity-cli/skills/`) |
+| `npx github:dbadaniel/ExpertSA-Skills elementor-wsp-mcp --legacy` | `~/.gemini/antigravity/skills/` (versões antigas do IDE) |
+| `npx github:dbadaniel/ExpertSA-Skills --list` | só lista as skills disponíveis |
+
+Também funciona com o instalador da comunidade [`skills`](https://github.com/antfu/skills-cli), no modo por projeto:
+```bash
+npx skills add dbadaniel/ExpertSA-Skills --skill elementor-wsp-mcp -a antigravity
 ```
+(O modo global dele, `-g`, instala em `~/.agents/skills/`, que o Antigravity não lê como pasta global. Para global, use o primeiro comando.)
 
-**Só para um projeto:** copie a pasta para `<seu-projeto>/.agents/skills/`.
+**Manual, sem Node:** baixe o ZIP pelo botão **Code → Download ZIP** do repositório, descompacte e copie a pasta `elementor-wsp-mcp` para `~/.gemini/config/skills/` (no Windows, `C:\Users\SEU_USUARIO\.gemini\config\skills\`). O resultado precisa ser `.../skills/elementor-wsp-mcp/SKILL.md`, sem pasta duplicada.
 
-O resultado precisa ser `.../skills/elementor-wsp-mcp/SKILL.md` (sem pasta duplicada). Reinicie o Antigravity depois.
+Depois de instalar, reinicie o Antigravity ou abra uma conversa nova.
 
-**Atualizar:** `git -C ~/ExpertSA-Skills pull` e copie a pasta de novo. (No Mac/Linux, em vez de copiar você pode criar um link uma vez: `ln -s ~/ExpertSA-Skills/elementor-wsp-mcp ~/.gemini/antigravity/skills/elementor-wsp-mcp`; aí basta o `git pull`.)
-
-Sem git? Baixe o ZIP pelo botão **Code → Download ZIP** do repositório, descompacte e copie só a pasta `elementor-wsp-mcp`.
+> Já tinha instalado antes em `~/.gemini/antigravity/skills/`? Apague essa cópia antiga para o Antigravity não carregar duas versões.
 
 ## 4. Usar
 

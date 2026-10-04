@@ -1,0 +1,16 @@
+{
+  "name": "expertsa-skills",
+  "version": "1.0.0",
+  "description": "Instalador das ExpertSA Skills para Google Antigravity",
+  "bin": {
+    "expertsa-skills": "bin/install.js"
+  },
+  "engines": {
+    "node": ">=16.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbadaniel/ExpertSA-Skills.git"
+  },
+  "license": "GPL-3.0"
+}

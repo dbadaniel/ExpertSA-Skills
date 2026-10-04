@@ -12,21 +12,25 @@ Coleção de skills para agentes de IA no formato aberto `SKILL.md`, compatível
 |---|---|
 | [`elementor-wsp-mcp`](elementor-wsp-mcp/) | Cria e edita páginas Elementor no WordPress pelo [WSP WordPress MCP](https://github.com/bilalnaseer/wsp-wordpress-mcp), com referência de widgets extraída do código-fonte do Elementor. |
 
-## Como instalar uma skill no Antigravity
+## Como instalar
 
-Cada pasta deste repositório é uma skill independente. Copie a pasta da skill desejada para:
-
-- **Global (todos os projetos):** `~/.gemini/antigravity/skills/<nome-da-skill>/`
-- **Só um projeto:** `<seu-projeto>/.agents/skills/<nome-da-skill>/`
-
-Exemplo (Mac/Linux):
+Com um comando (precisa do Node.js 16.7+):
 ```bash
-git clone https://github.com/dbadaniel/ExpertSA-Skills.git ~/ExpertSA-Skills
-mkdir -p ~/.gemini/antigravity/skills
-cp -r ~/ExpertSA-Skills/elementor-wsp-mcp ~/.gemini/antigravity/skills/
+npx github:dbadaniel/ExpertSA-Skills elementor-wsp-mcp
 ```
+Instala na pasta global de skills do Antigravity (`~/.gemini/config/skills/`). Sem o nome da skill, instala todas. Rodar de novo atualiza.
 
-Instruções completas (incluindo Windows e configuração de MCP) ficam no README de cada skill.
+| Opção | Onde instala |
+|---|---|
+| *(nenhuma)* | `~/.gemini/config/skills/` — global, Antigravity 2.0 e IDE |
+| `--project` | `./.agents/skills/` — só o projeto aberto |
+| `--cli` | `~/.gemini/antigravity-cli/skills/` — Antigravity CLI |
+| `--legacy` | `~/.gemini/antigravity/skills/` — versões antigas do IDE |
+| `--list` | lista as skills disponíveis |
+
+Também funciona com [`npx skills`](https://github.com/antfu/skills-cli) no modo por projeto: `npx skills add dbadaniel/ExpertSA-Skills --skill elementor-wsp-mcp -a antigravity`.
+
+Instruções completas (incluindo configuração de MCP e instalação manual) ficam no README de cada skill.
 
 ## Licença
 Cada skill tem sua própria licença dentro da pasta (ex.: `elementor-wsp-mcp/LICENSE`, GPL-3.0).
