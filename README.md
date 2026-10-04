@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/Exsa-azul.png" alt="ExpertSA" width="420">
+</p>
+
 # ExpertSA Skills
 
 Coleção de skills para agentes de IA no formato aberto `SKILL.md`, compatível com Google Antigravity, Claude Code e outros agentes que seguem o padrão Agent Skills.
@@ -26,3 +30,11 @@ Instruções completas (incluindo Windows e configuração de MCP) ficam no READ
 
 ## Licença
 Cada skill tem sua própria licença dentro da pasta (ex.: `elementor-wsp-mcp/LICENSE`, GPL-3.0).
+
+---
+
+## ☕ Apoie o projeto
+
+Este projeto é mantido ativamente para resolver gargalos operacionais reais. Se ele te poupou horas de desenvolvimento ou simplificou suas automações, considere apoiar:
+
+**Chave Pix:** `expertsa.oficial@gmail.com`

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../assets/Exsa-azul.png" alt="ExpertSA" width="420">
+</p>
+
 # Skill: Elementor via WSP MCP (Google Antigravity)
 
 Ensina o agente do Antigravity a criar e editar páginas Elementor no seu WordPress usando o plugin gratuito **WSP MCP** (github.com/bilalnaseer/wsp-wordpress-mcp).
@@ -76,3 +80,11 @@ A pasta `references/elementor/` contém a referência de todos os widgets gratui
 - MCP: [WSP WordPress MCP](https://github.com/bilalnaseer/wsp-wordpress-mcp) (WebSensePro, GPL-2.0).
 - Referência de controles gerada a partir do [Elementor](https://github.com/elementor/elementor) (GPL-3.0).
 - Esta skill é distribuída sob a GPL-3.0 (veja `LICENSE`). Projeto independente, sem vínculo com Elementor, WebSensePro ou Google.
+
+---
+
+## ☕ Apoie o projeto
+
+Este projeto é mantido ativamente para resolver gargalos operacionais reais. Se ele te poupou horas de desenvolvimento ou simplificou suas automações, considere apoiar:
+
+**Chave Pix:** `expertsa.oficial@gmail.com`
