@@ -12,6 +12,7 @@ Ensina o agente do Antigravity a criar e editar páginas Elementor no seu WordPr
 2. Vá em **MCP → Settings** e ligue:
    - Grupo **Pages**: Create Page, Get Pages (e Update Page, se quiser que o agente publique).
    - Grupo **Media**: Upload Media From URL, Upload Media, List Media.
+   - Grupo **Menus**: todas (para o agente corrigir itens e locais de menu; plugin 2.9.0 ou mais novo).
    - Grupo **Elementor**: todas (ou pelo menos List Pages, Get Page, Get Element, Find Element, Add Container, Add Widget, Update Element, Remove Element, Get Widget Schema, Get Active Kit, Get Breakpoints, Update Page Settings, Duplicate, Move, Regenerate CSS).
 3. Vá em **MCP → Connection**, aba **Antigravity**, e copie o snippet (já vem com URL e chave).
 

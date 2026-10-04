@@ -14,6 +14,21 @@ Nomes MCP usam underscore (`wsp_elementor_get_page`). No wp-admin, cada uma tem 
 | `wsp_list_media` / `wsp_get_media` | busca / `id` | Para reaproveitar imagens já existentes. |
 | `wsp_get_site_info` | — | URL do site, versão etc. |
 
+## Menus do WordPress (plugin ≥ 2.9.0, grupo "Menus", requer `edit_theme_options`)
+
+| Ferramenta | Parâmetros | Retorno / observações |
+|---|---|---|
+| `wsp_get_menus` | — | `{ menus:[{id,name,slug,item_count,locations[]}] }`. **Comece por aqui**: mostra qual menu está em qual local do tema. |
+| `wsp_get_menu_items` | `menu`* (id, slug ou nome) | `{ items:[{id,title,url,parent,order,type,object,object_id,target,classes}] }` |
+| `wsp_get_menu_locations` | — | `{ locations:[{location,description,menu_id,menu_name}] }` |
+| `wsp_add_menu_item` | `menu`*, `type`* (`custom`\|`page`\|`post`\|`category`), `title`, `url`, `object_id`, `parent`, `order` | `custom` precisa de `title`+`url`; os outros de `object_id` do tipo certo. |
+| `wsp_update_menu_item` | `item_id`*, `title`, `url`, `parent`, `order` | Só muda o que foi enviado. Não muda `target`, classes nem o objeto ligado. |
+| `wsp_delete_menu_item` | `item_id`* | Apaga definitivo. |
+| `wsp_create_menu` / `wsp_delete_menu` | `name`* / `menu`* | |
+| `wsp_assign_menu_location` | `location`*, `menu` (id; 0 desliga) | Só locais listados em `get_menu_locations`. |
+
+Detalhes e roteiro de correção: `menus.md`.
+
 ## Elementor — leitura
 
 | Ferramenta | Parâmetros | Retorno / observações |
