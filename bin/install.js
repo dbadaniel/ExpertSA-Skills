@@ -7,6 +7,7 @@ const path = require('path');
 const os = require('os');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
+const VERSION = require(path.join(REPO_ROOT, 'package.json')).version;
 const HOME = os.homedir();
 const TARGETS = {
   global: { dir: path.join(HOME, '.gemini', 'config', 'skills'), label: 'global (Antigravity 2.0 e IDE)' },
@@ -49,6 +50,7 @@ Rodar de novo atualiza a skill para a versão mais recente.
 function main() {
   const args = process.argv.slice(2);
   if (args.includes('--help') || args.includes('-h')) return help();
+  if (args.includes('--version') || args.includes('-v')) return console.log(VERSION);
 
   const skills = availableSkills();
   if (args.includes('--list')) {
@@ -75,7 +77,8 @@ function main() {
   const toInstall = requested.length ? requested : skills;
 
   fs.mkdirSync(target.dir, { recursive: true });
-  console.log(`\nInstalando em ${target.dir} (${target.label}):\n`);
+  console.log(`\nExpertSA Skills v${VERSION}`);
+  console.log(`Instalando em ${target.dir} (${target.label}):\n`);
   for (const s of toInstall) {
     const dest = path.join(target.dir, s);
     const existed = fs.existsSync(dest);
